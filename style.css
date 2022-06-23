@@ -47,5 +47,9 @@ body{
     border-radius: 5px;
     padding: 20px;
     background: linear-gradient(red 50%, black);
+    backface-visibility: hidden;
+}
 
+.front-face {
+    transform: rotateY(180deg);
 }
