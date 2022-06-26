@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(red,black);
+
+}
+
+nav {
+    position: absolute;
+    right: 150px;
+    top: 50px;
+    
+}
+
+nav a {
+    border: 5px solid yellow;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: white;
+    color:blue;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    transition: 1s all;
+    
+}
+
+nav a:hover {
+    text-decoration:underline;
+    cursor: pointer;
+    
+   
+   
+}
+.memory-game{
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card{
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory-card:active{
+    transform: scale(0.97);
+    transition: 0.2s
+}
+
+.front-face, .back-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    background: linear-gradient(#4B0082, #9198e5);
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+#audiogame{
+    position: absolute;
+}
