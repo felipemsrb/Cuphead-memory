@@ -5,6 +5,7 @@ let firstCard, secondCard;
 let lockBoard = false;
 
 
+
 function flipCard() {
     if (lockBoard) return;
     if(this === firstCard) return;
